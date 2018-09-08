@@ -18,15 +18,10 @@ from Triangle import classifyTriangle
 class TestTriangles(unittest.TestCase):
     # define multiple sets of tests as functions with names that begin
 
-    def testRightTriangleA(self): 
-        print(classifyTriangle(3,4,5))
-        print(classifyTriangle(1.0,1.0,math.sqrt(2)))
+    def testRightTriangle(self): 
         self.assertEqual(classifyTriangle(3,4,5),'Scalene&Right','3,4,5 is a Right triangle')
-        self.assertEqual(classifyTriangle(1.0,1.0,math.sqrt(2)),'Scalene&Right','1.0,1.0,math.sqrt(2) is a Right triangle')
-
-    def testRightTriangleB(self): 
         self.assertEqual(classifyTriangle(5,3,4),'Scalene&Right','5,3,4 is a Right triangle')
-        self.assertEqual(classifyTriangle(math.sqrt(2),1.0,1.0),'Scalene&Right','math.sqrt(2),1.0,1.0 is a Right triangle')
+        self.assertEqual(classifyTriangle(5,12,13),'Scalene&Right', '5,12,13 is a Right triangle')
         
     def testEquilateralTriangles(self): 
         self.assertEqual(classifyTriangle(1,1,1),'Equilateral','Should be equilateral')
@@ -43,7 +38,6 @@ class TestTriangles(unittest.TestCase):
     def testValidInputA(self):
         self.assertEqual(classifyTriangle(209,6,7), 'InvalidInput', 'Invalid input')
         self.assertEqual(classifyTriangle(56,409,7), 'InvalidInput', 'Invalid input')
-        self.assertEqual(classifyTriangle(56,4,788), 'InvalidInput', 'Invalid input')
 
     def testValidInputB(self):
         self.assertEqual(classifyTriangle('209',6,8.9), 'InvalidInput', 'Invalid input')
