@@ -7,6 +7,7 @@ The primary goal of this file is to demonstrate a simple python program to class
 
 @author: jrr
 @author: rk
+Edited by: Laura Oliveto 9/8/18
 """
 
 def classifyTriangle(a,b,c):
